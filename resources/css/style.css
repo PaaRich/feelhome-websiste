@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    position: relative;
+}
+
+
+/* main header */
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url(../images/welcomeroom2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+nav {
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+    background-color: rgba(0, 0, 0, 0.493);
+}
+
+.links ul li,
+.links ul li a {
+    border-radius: 20px;
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    padding: 0.2em;
+    margin: 0 0.2em;
+    color: rgba(255, 255, 255, 0.801);
+    font-weight: 300;
+    font-size: large;
+    letter-spacing: 0.5px;
+    transition: 0.8s;
+}
+
+.links ul li:hover,
+.links ul li:active,
+.links ul li a:hover,
+.links ul li a:active {
+    background-color: rgba(0, 0, 0, 0.924);
+}
+
+.links ul li:link,
+.links ul li:visited,
+.links ul li a:link,
+.links ul li a:visited {
+    color: burlywood;
+}
+
+header>div {
+    padding: 2% 0 5% 0;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.main_header {
+    position: relative;
+}
+
+.main_header>div {
+    text-align: center;
+    margin: 10%;
+}
+
+.main_header p {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.main_header h1 {
+    font-size: 40px;
+}
+
+.main_header button {
+    border: none;
+    border-radius: 35px;
+    padding: 0.5em 0.8em;
+    font-size: large;
+    margin: 0.3em;
+    transition-duration: 0.5s;
+}
+
+.main_header button:hover {
+    transform: scale(0.8);
+}
+
+
+/* .main_header button#this {
+    display: inline-flex;
+    background-color: red;
+} */
+
+
+/* logo */
+
+.feel {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.main_feel {
+    color: white;
+}
+
+.main_home {
+    color: black;
+}
+
+.home {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+
+/* menu-btn */
+
+#menu-btn ion-icon {
+    font-size: 40px;
+    background-color: rgba(0, 0, 139, 0.872);
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+/* whatsapp-btn */
+
+.whatsapp-btn {
+    position: absolute;
+    top: 60%;
+    bottom: 5%;
+    right: 5%;
+    left: 80%;
+}
+
+.whatsapp-btn ion-icon:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+.whatsapp-btn ion-icon {
+    color: green;
+    font-size: 50px;
+    padding: 2px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.609);
+    animation: paarich 1s linear 0s infinite both;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes paarich {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+
+/* about us */
+
+.section_1 {
+    background-color: rgba(222, 184, 135, 0.74);
+    padding: 2em 0;
+}
+
+.section_1 .service {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.section_1 .service>div {
+    display: flex;
+    gap: 1em;
+    margin: 3em 0;
+}
+
+.section_1 .service_text {
+    flex-basis: 45%;
+    margin: auto;
+    text-align: center;
+}
+
+.section_1 .service .service_img {
+    flex-basis: 45%;
+    margin: auto;
+}
+
+.section_1 .service .service_img img {
+    width: 450px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.section_1 .service h2,
+.section_1 .service h3 {
+    text-align: center;
+}
+
+.section_1 .service p {
+    font-size: large;
+    line-height: 30px;
+}
+
+.section_1 .service .service_text button {
+    padding: 0.7em 0.8em;
+    border: none;
+    border: 0px solid white;
+    font-size: large;
+    border-radius: 35px;
+    margin: 1em 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.section_1 .service .service_text button:hover {
+    transform: scale(0.8);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.822);
+}
+
+
+/* SERVICES */
+
+.section_2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.301)), url(./../images/livingroom3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.section_2 div {
+    padding: 2em 0;
+}
+
+.section_2 div h2 {
+    text-align: center;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.section_2 .main .text {
+    flex-basis: 40%;
+    text-align: center;
+    margin: auto;
+}
+
+.section_2 .main .text p {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+    line-height: 30px;
+}
+
+.section_2 .main .text h3 {
+    font-size: 25px;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.section_2 .main .forms {
+    flex-basis: 40%;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    border-radius: 70px;
+    font-size: large;
+}
+
+.section_2 .main .forms div {
+    padding: 0.8em;
+}
+
+.section_2 .main .forms input:not(input[type="submit"]) {
+    padding: 0.8em;
+    border: none;
+    border-radius: 35px;
+    margin-left: 0.5em;
+    font-size: 15px;
+}
+
+.section_2 .main .forms select {
+    padding: 0.8em;
+    font-size: 15px;
+    border: none;
+    border-radius: 35px;
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+
+option {
+    background-color: rgba(222, 184, 135, 0.555);
+}
+
+.section_2 .main .forms select:focus {
+    outline: none;
+}
+
+.section_2 .main .forms input:focus {
+    outline: none;
+    border: none;
+}
+
+
+/* .section_2 .main .forms input[type="submit"] {
+    padding: em;
+    border: none;
+    border-radius: 35px;
+    font-size: 15px;
+    float: right;
+    cursor: pointer;
+} */
+
+.section_2 div {
+    max-width: 90%;
+    margin: auto;
+}
+
+.main {
+    display: flex;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+
+/* rates us */
+
+.section_3 {
+    background-color: rgba(222, 184, 135, 0.534);
+}
+
+.rate_container {
+    max-width: 90%;
+    margin: auto;
+    padding: 2.5em 0;
+}
+
+.rate_container h2 {
+    text-align: center;
+}
+
+.img_container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(33%, 1fr));
+    gap: 2%;
+    margin: 3em 0;
+}
+
+.img_container div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    margin-bottom: 1em;
+}
+
+
+/* .img_1 {
+    flex-basis: 25%;
+    padding: 1.5em 1em 3em 1em;
+    border-radius: 25px;
+    transition-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0.924);
+    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.603);
+} */
+
+.img_1,
+.img_2,
+.img_3 {
+    flex-basis: 25%;
+    padding: 1.5em 1em 4em 1em;
+    border-radius: 25px;
+    transition-duration: 0.5s;
+    border: 2px solid white;
+}
+
+.img_1 select,
+.img_2 select,
+.img_3 select {
+    outline: none;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 2px;
+    border: none;
+    border-radius: 3px;
+}
+
+.img_1 option,
+.img_2 option,
+.img_3 option {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+.img_1:hover,
+.img_2:hover,
+.img_3:hover {
+    transform: translateY(5px);
+    background-color: rgba(255, 255, 255, 0.924);
+    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.603);
+}
+
+.img_1 h4,
+.img_2 h4,
+.img_3 h4 {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.img_1 ul li,
+.img_2 ul li,
+.img_3 ul li {
+    list-style: none;
+    padding: 0 1px;
+}
+
+.img_1 ul,
+.img_2 ul,
+.img_3 ul {
+    margin: 0 2px;
+}
+
+.fi~li {
+    display: none;
+}
+
+.ra {
+    margin: 0 2em;
+}
+
+.ra ion-icon {
+    color: gold;
+    font-size: 20px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.ra ion-icon:hover {
+    transform: scale(1.3);
+}
+
+
+/* footer */
+
+footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.609)), url(./../images/welcomeroom2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgba(255, 255, 255, 0.897);
+    padding: 3em 0;
+}
+
+footer h2 {
+    word-spacing: 0.3em;
+    letter-spacing: 2px;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+footer p {
+    font-stretch: narrower;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+}
+
+footer div {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.icons {
+    padding: 1em;
+}
+
+.icons ion-icon {
+    padding: 0.3em;
+    font-size: 25px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.icons ion-icon:hover {
+    transform: rotate(90deg);
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width:1024px) {
+    /* about us */
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .section_1 .service>div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 3em;
+    }
+}
+
+@media (max-width:768px) {
+    /* main header */
+    /* nav {
+        display: none;
+    } */
+    .main_header>div {
+        text-align: center;
+        margin: 20% 0;
+    }
+    /* about us */
+    .service>div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 3em;
+    }
+    /* services */
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    /* rate us */
+    .img_container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .rate_container {
+        max-width: 80%;
+        margin: auto;
+        padding: 2.5em 0;
+    }
+    .whatsapp-btn {
+        position: absolute;
+        top: 70%;
+        bottom: 10%;
+        right: 10%;
+        left: 80%;
+    }
+    #menu-btn {
+        display: inline-block;
+        margin-top: 30px;
+    }
+    #menu-btn ion-icon:hover nav {
+        display: block;
+    }
+    header .dropdown-menu {
+        position: fixed;
+        top: 0;
+        height: -100px;
+        width: 500px;
+        transition: all 0.5s;
+    }
+}
+
+
+/* @media (max-width:480px) {
+    body {
+        display: none;
+    }
+    .main_header div>div {
+        display: flex;
+    }
+    .whatsapp-btn {
+        position: absolute;
+        top: 90%;
+        bottom: 5%;
+        right: 10%;
+        left: 90%;
+    } */
