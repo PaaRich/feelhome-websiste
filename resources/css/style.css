@@ -271,7 +271,7 @@ header>div {
     height: 100%;
 }
 
-.section_2 div {
+.section_2>div {
     padding: 2em 0;
 }
 
@@ -288,7 +288,7 @@ header>div {
 }
 
 .section_2 .main .text p {
-    font-size: 20px;
+    font-size: large;
     letter-spacing: 0.5px;
     word-spacing: 0.5px;
     line-height: 30px;
@@ -544,7 +544,6 @@ footer div {
     top: 85%;
     right: 1%;
     border-radius: 20px;
-    /* display: none; */
     border: none;
     display: none;
     padding: 10px;
@@ -641,7 +640,7 @@ body:hover::after {
         top: 73%;
     }
     .section_1 .service .service_img img {
-        width: 350px;
+        width: 450px;
         border-top-left-radius: 50%;
         border-top-right-radius: 50%;
     }
@@ -747,7 +746,7 @@ body:hover::after {
         top: 73%;
     }
     .section_1 .service .service_img img {
-        width: 350px;
+        width: 300px;
         border-top-left-radius: 50%;
         border-top-right-radius: 50%;
     }
@@ -755,6 +754,37 @@ body:hover::after {
         display: grid;
         grid-template-columns: 1fr;
         grid-row-gap: 3em;
+    }
+    /*this code is prone to changing*/
+    .section_2 .main .forms input:not(input[type="submit"]) {
+        padding: 0.3em;
+        border: none;
+        border-radius: 35px;
+        margin-left: 0;
+        font-size: small;
+    }
+    .section_2 .main .forms select {
+        padding: 0.3em;
+        font-size: small;
+        border: none;
+        border-radius: 35px;
+        cursor: pointer;
+    }
+    .section_2 .main .forms input[type="submit"] {
+        padding: 0.3em;
+        border: none;
+        border-radius: 35px;
+        font-size: small;
+        cursor: pointer;
+    }
+    .section_2 .main .forms {
+        max-width: fit-content;
+        /* flex-basis: 50%; */
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1.5em;
+        border-radius: 70px;
+        font-size: 15px;
     }
     /* services */
     .main {
