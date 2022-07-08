@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial scale=1.0">
     <title>FeelHome</title>
 </head>
 
