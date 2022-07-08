@@ -8,6 +8,7 @@
 
 html {
     position: relative;
+    z-index: -100;
 }
 
 
@@ -31,6 +32,22 @@ nav {
     background-color: rgba(0, 0, 0, 0.493);
 }
 
+#menu-btn {
+    display: none;
+    font-size: larger;
+    margin-top: 5%;
+    margin-left: 10%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.656);
+    cursor: pointer;
+}
+
+#toggle {
+    display: none;
+}
+
 .links ul li,
 .links ul li a {
     border-radius: 20px;
@@ -46,33 +63,24 @@ nav {
     transition: 0.8s;
 }
 
-.links ul li:hover,
-.links ul li:active,
-.links ul li a:hover,
-.links ul li a:active {
-    background-color: rgba(0, 0, 0, 0.924);
-}
-
-.links ul li:link,
-.links ul li:visited,
-.links ul li a:link,
-.links ul li a:visited {
-    color: burlywood;
+.links ul li a:hover {
+    color: rgb(222, 184, 135);
 }
 
 header>div {
-    padding: 2% 0 5% 0;
+    position: relative;
+    padding: 3% 0;
     max-width: 90%;
+    height: 100%;
     margin: 0 auto;
 }
 
-.main_header {
-    position: relative;
-}
-
 .main_header>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    margin: 10%;
 }
 
 .main_header p {
@@ -87,10 +95,16 @@ header>div {
 .main_header button {
     border: none;
     border-radius: 35px;
-    padding: 0.5em 0.8em;
+    padding: 0.4em 0.6em;
     font-size: large;
     margin: 0.3em;
     transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+#this {
+    display: inline-flex;
+    align-items: center;
 }
 
 .main_header button:hover {
@@ -142,23 +156,15 @@ header>div {
     z-index: 1000;
 }
 
-
-/* whatsapp-btn */
-
-.whatsapp-btn {
-    position: absolute;
-    top: 60%;
-    bottom: 5%;
-    right: 5%;
-    left: 80%;
-}
-
-.whatsapp-btn ion-icon:hover {
+#whatsapp-logo:hover {
     cursor: pointer;
     animation-play-state: paused;
 }
 
-.whatsapp-btn ion-icon {
+#whatsapp-logo {
+    position: fixed;
+    top: 73%;
+    right: 1%;
     color: green;
     font-size: 50px;
     padding: 2px;
@@ -167,6 +173,7 @@ header>div {
     box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.609);
     animation: paarich 1s linear 0s infinite both;
     animation-direction: alternate-reverse;
+    z-index: 100;
 }
 
 @keyframes paarich {
@@ -231,7 +238,7 @@ header>div {
 }
 
 .section_1 .service .service_text button {
-    padding: 0.7em 0.8em;
+    padding: 0.4em 0.6em;
     border: none;
     border: 0px solid white;
     font-size: large;
@@ -239,6 +246,12 @@ header>div {
     margin: 1em 0;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+#for_service {
+    display: inline-flex;
+    align-items: center;
 }
 
 .section_1 .service .service_text button:hover {
@@ -289,7 +302,6 @@ header>div {
 
 .section_2 .main .forms {
     flex-basis: 40%;
-    text-align: center;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2em;
@@ -297,12 +309,17 @@ header>div {
     font-size: large;
 }
 
-.section_2 .main .forms div {
-    padding: 0.8em;
+.section_2 .main .forms table {
+    margin: 0 auto;
+}
+
+.section_2 .main .forms table tbody tr td {
+    padding: 10px 0;
+    margin: 10px 0;
 }
 
 .section_2 .main .forms input:not(input[type="submit"]) {
-    padding: 0.8em;
+    padding: 0.5em;
     border: none;
     border-radius: 35px;
     margin-left: 0.5em;
@@ -310,11 +327,10 @@ header>div {
 }
 
 .section_2 .main .forms select {
-    padding: 0.8em;
+    padding: 0.5em;
     font-size: 15px;
     border: none;
     border-radius: 35px;
-    margin-left: 0.5em;
     cursor: pointer;
 }
 
@@ -331,15 +347,13 @@ option {
     border: none;
 }
 
-
-/* .section_2 .main .forms input[type="submit"] {
-    padding: em;
+.section_2 .main .forms input[type="submit"] {
+    padding: 0.5em;
     border: none;
     border-radius: 35px;
     font-size: 15px;
-    float: right;
     cursor: pointer;
-} */
+}
 
 .section_2 div {
     max-width: 90%;
@@ -364,6 +378,18 @@ option {
     padding: 2.5em 0;
 }
 
+.price-rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+}
+
 .rate_container h2 {
     text-align: center;
 }
@@ -373,6 +399,7 @@ option {
     grid-template-columns: repeat(3, minmax(33%, 1fr));
     gap: 2%;
     margin: 3em 0;
+    padding: 2em;
 }
 
 .img_container div img {
@@ -381,16 +408,6 @@ option {
     border-radius: 25px;
     margin-bottom: 1em;
 }
-
-
-/* .img_1 {
-    flex-basis: 25%;
-    padding: 1.5em 1em 3em 1em;
-    border-radius: 25px;
-    transition-duration: 0.5s;
-    background-color: rgba(255, 255, 255, 0.924);
-    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.603);
-} */
 
 .img_1,
 .img_2,
@@ -431,7 +448,8 @@ option {
 .img_1 h4,
 .img_2 h4,
 .img_3 h4 {
-    margin: 0 10px;
+    margin: 0.3em 0;
+    font-size: larger;
     text-align: center;
 }
 
@@ -453,6 +471,8 @@ option {
 }
 
 .ra {
+    display: flex;
+    align-items: center;
     margin: 0 2em;
 }
 
@@ -461,6 +481,7 @@ option {
     font-size: 20px;
     transition-duration: 0.5s;
     cursor: pointer;
+    padding: 0 2px;
 }
 
 .ra ion-icon:hover {
@@ -506,6 +527,7 @@ footer div {
 .icons ion-icon {
     padding: 0.3em;
     font-size: 25px;
+    color: white;
     cursor: pointer;
     transition-duration: 0.5s;
 }
@@ -515,32 +537,115 @@ footer div {
 }
 
 
+/* body::after being change to top */
+
+.top {
+    position: fixed;
+    top: 85%;
+    right: 1%;
+    border-radius: 20px;
+    /* display: none; */
+    border: none;
+    display: none;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: -1px 1px 15px 2px rgba(0, 0, 0, 0.843);
+}
+
+body:hover::after {
+    transform: translate(1.1);
+}
+
+
 /* MEDIA QUERIES */
 
-@media (max-width:1024px) {
-    /* about us */
-    .main {
-        display: grid;
-        grid-template-columns: 1fr;
+@media only screen and (max-width:980) {
+    /* body {
+        display: none;
+    } */
+    .price-rate {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 5px 0;
     }
-    .section_1 .service>div {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 3em;
+    .prices {
+        display: flex;
+        align-items: center;
     }
 }
 
-@media (max-width:768px) {
+@media only screen and (max-width:768px) {
     /* main header */
-    /* nav {
+    /* about us */
+    /* body {
         display: none;
     } */
-    .main_header>div {
-        text-align: center;
-        margin: 20% 0;
+    #menu-btn {
+        display: block;
     }
-    /* about us */
-    .service>div {
+    header>div {
+        position: relative;
+        max-width: 100%;
+        height: 100%;
+    }
+    .logo {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #toggle {
+        display: block;
+        font-weight: bolder;
+        margin-left: 70px;
+        border: 2px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.867);
+        padding: 5px;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        top: 0%;
+        left: -100%;
+        width: 245px;
+        height: 100%;
+        border-radius: 5px;
+        padding: 1em;
+        background-color: rgba(0, 0, 0, 0.776);
+        z-index: 100;
+    }
+    .links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .links ul li {
+        width: 100%;
+        border: none;
+        margin: 20px 0;
+        display: block;
+    }
+    #whatsapp-logo {
+        position: fixed;
+        right: 1%;
+        top: 73%;
+    }
+    .section_1 .service .service_img img {
+        width: 350px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+    }
+    .section_1 .service>div {
         display: grid;
         grid-template-columns: 1fr;
         grid-row-gap: 3em;
@@ -554,47 +659,132 @@ footer div {
     .img_container {
         display: grid;
         grid-template-columns: 1fr;
+        padding-bottom: 2.5em;
     }
     .rate_container {
         max-width: 80%;
         margin: auto;
         padding: 2.5em 0;
     }
-    .whatsapp-btn {
-        position: absolute;
-        top: 70%;
-        bottom: 10%;
-        right: 10%;
-        left: 80%;
+    .price-rate {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
     }
-    #menu-btn {
-        display: inline-block;
-        margin-top: 30px;
+    .prices {
+        display: flex;
+        align-items: center;
     }
-    #menu-btn ion-icon:hover nav {
-        display: block;
-    }
-    header .dropdown-menu {
-        position: fixed;
-        top: 0;
-        height: -100px;
-        width: 500px;
-        transition: all 0.5s;
+    .ra {
+        margin: 1em 0;
     }
 }
 
-
-/* @media (max-width:480px) {
-    body {
+@media only screen and (max-width:480px) {
+    /* body {
         display: none;
-    }
-    .main_header div>div {
-        display: flex;
-    }
-    .whatsapp-btn {
-        position: absolute;
-        top: 90%;
-        bottom: 5%;
-        right: 10%;
-        left: 90%;
     } */
+    #menu-btn {
+        display: block;
+    }
+    header>div {
+        position: relative;
+        max-width: 100%;
+        height: 100%;
+    }
+    .logo {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #toggle {
+        display: block;
+        font-weight: bolder;
+        margin-left: 70px;
+        border: 2px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.867);
+        padding: 5px;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        top: 0%;
+        left: -100%;
+        width: 245px;
+        height: 100%;
+        border-radius: 5px;
+        padding: 1em;
+        background-color: rgba(0, 0, 0, 0.776);
+        z-index: 100;
+    }
+    .main_header div {
+        width: 70%;
+        text-align: left;
+    }
+    .links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .links ul li {
+        width: 100%;
+        border: none;
+        margin: 20px 0;
+        display: block;
+    }
+    #whatsapp-logo {
+        position: fixed;
+        right: 1%;
+        top: 73%;
+    }
+    .section_1 .service .service_img img {
+        width: 350px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+    }
+    .section_1 .service>div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 3em;
+    }
+    /* services */
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    */
+    /* rate us */
+    .img_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 2.5em;
+    }
+    .rate_container {
+        max-width: 80%;
+        margin: auto;
+        padding: 2.5em 0;
+    }
+    .price-rate {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+    }
+    .prices {
+        display: flex;
+        align-items: center;
+    }
+    .ra {
+        margin: 1em 0;
+    }
+}
