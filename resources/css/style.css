@@ -778,7 +778,7 @@ body:hover::after {
         cursor: pointer;
     }
     .section_2 .main .forms {
-        max-width: fit-content;
+        max-width: 95%;
         /* flex-basis: 50%; */
         margin: 0 auto;
         background-color: rgba(0, 0, 0, 0.5);
