@@ -1,5 +1,4 @@
-// this is for the menubutton
-
+// this is for the menu button
 var toggleBar = document.querySelector('#toggle'),
     menuBtn = document.querySelector('#menu-btn'),
     toggleMenu = document.querySelector('nav');
